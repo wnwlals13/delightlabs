@@ -1,0 +1,36 @@
+.graph-section {
+  margin-top: 15px;
+}
+
+.graph-index {
+  color: var(--bg-main-first);
+  font-size: 14px;
+  line-height: 22px;
+  gap: 20px;
+}
+
+.graph-index-item {
+  gap: 10px;
+  align-items: center;
+}
+
+.bar {
+  width: 32px;
+  height: 5px;
+}
+
+.bar.income {
+  background: var(--bg-main-first);
+}
+.bar.expense {
+  background: var(--bg-main-second);
+}
+
+.tooltip {
+  background: var(--bg-main-first);
+  width: 94px;
+  height: 56px;
+  border-radius: 8px;
+  color: var(--bg-background);
+  padding: 8px;
+}
