@@ -19,18 +19,22 @@ export default function ListSection() {
   };
 
   const loadData = async (index: number) => {
-    let param = index == 0 ? "_limit=20&" : "";
+    let param = index == 0 ? "_limit=20&" : "_limit=100&";
 
     const data = await getTransaction(param);
 
-    // if (index === 0) setAllData(data);
-    // else if (index === 1) {
-    //   const filtered = data.filter((v: any) => v.amount >= 0);
-    //   setAllData(filtered);
-    // } else if (index === 2) {
-    //   const filtered = data.filter((v: any) => v.amount < 0);
-    //   setAllData(filtered);
-    // }
+    if (index === 0) setAllData(data);
+    else if (index === 1) {
+      const filtered = data
+        .filter((v: any) => v.amount >= 0)
+        .filter((v: any, i: number) => i < 10);
+      setAllData(filtered);
+    } else if (index === 2) {
+      const filtered = data
+        .filter((v: any) => v.amount < 0)
+        .filter((v: any, i: number) => i < 10);
+      setAllData(filtered);
+    }
   };
 
   useEffect(() => {
