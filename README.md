@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Delight Labs 과제전형
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 🙌 안녕하세요. 지원자 주지민입니다. Delight Labs 과제에 대해 간략히 설명드리겠습니다.
 
-Currently, two official plugins are available:
+## ⚒️ 사용 기술
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React, Typescript, json-server
 
-## Expanding the ESLint configuration
+## 구현 기능
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. 웹 혹은 앱 화면에서도 고정된 너비를 유지할 수 있도록 CSS 스타일링을 했습니다.
+2. 버튼 토글 UI를 만들어 주/월 그래프 변경이 가능하도록 했습니다.
+3. recharts 라이브러리를 활용하여 금주, 현재 월별 입출금 내역에 대한 정보를 확인할 수 있도록 했습니다.
+4. 프로토타입처럼 입출금 차트를 구분하였습니다.
+5. 최근 거래 내역 부분에서 3가지 탭을 클릭할 수 있도록 했습니다. 각 탭에 따라 조회되는 정보를 다르게 하도록 했습니다.
 
-- Configure the top-level `parserOptions` property like this:
+## 개발 시 어려웠던 부분
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- 차트 라이브러리를 이용해 UI나 데이터를 커스터마이즈하는 부분에서 일정 시간을 소요했습니다.
+- 목업 데이터가 몇십만개 이상이기 때문에 해당 데이터를 필터링하여 차트 데이터로 변환하는 작업에 많은 시간을 할애하였습니다.

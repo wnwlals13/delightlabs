@@ -1,0 +1,20 @@
+.toggle {
+  background: var(--bg-gray-background);
+  border-radius: 20px;
+}
+
+.toggle button {
+  background: var(--bg-gray-background);
+  width: 86px;
+  height: 34px;
+  padding: 5px 17px 5px 17px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg-gray-font);
+}
+
+.toggle button.active {
+  background: var(--bg-main-first);
+  color: var(--bg-background);
+}
