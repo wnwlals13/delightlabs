@@ -11,9 +11,12 @@ export default function CustomizedTooltip({
   if (active && payload && payload.length) {
     const item = payload[0].payload;
     const { id, date, income_val, expense_val } = item;
-    console.log(date, income_val, expense_val, label);
 
-    let num = Math.round(income_val * 100)
+    let income = Math.round(income_val * 100)
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    let expense = Math.round(expense_val * 100)
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -37,7 +40,8 @@ export default function CustomizedTooltip({
 
     return (
       <div className="tooltip">
-        <span>{`$${num}`}</span>
+        <span className="income">{`+$${income}`}</span>
+        <span className="expense">{`-$${expense}`}</span>
         <span>{`${mm} ${dd}`}</span>
       </div>
     );
