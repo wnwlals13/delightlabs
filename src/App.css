@@ -83,6 +83,12 @@ header .alarm-btn {
   white-space: nowrap;
 }
 
+header .alarm-btn.active {
+  background: url("./assets/alarm-active.png") no-repeat;
+  background-size: 24px auto;
+  background-position: center bottom;
+}
+
 nav {
   position: fixed;
   bottom: 0;

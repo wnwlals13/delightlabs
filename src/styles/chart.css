@@ -29,8 +29,10 @@
 .tooltip {
   background: var(--bg-main-first);
   width: 94px;
-  height: 56px;
   border-radius: 8px;
   color: var(--bg-background);
   padding: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
 }

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+/**
+ * 네비게이션바
+ * @returns
+ */
 export default function NaviBar() {
   const [selected, setSelected] = useState("activity");
 

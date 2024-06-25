@@ -1,12 +1,11 @@
+import { transaction } from "../../repository/transaction";
 import React from "react";
 
-export type transaction = {
-  amount: number;
-  name: string;
-  timestamp: string;
-  type: string;
-};
-
+/**
+ * 리스트 아이템 컴포넌트
+ * @param param0
+ * @returns
+ */
 export default function ListItem({ item }: { item: transaction }) {
   const { name, amount, timestamp, type } = item;
   const date = new Date(timestamp);
@@ -25,7 +24,9 @@ export default function ListItem({ item }: { item: transaction }) {
           )}`}</div>
         </div>
         <div className="list-info-meta">
-          <div className="type">{type}</div>
+          <div className="type">
+            {type.charAt(0).toUpperCase() + type.slice(1)}
+          </div>
           <div className="timestamp">
             {String(hours).padStart(2, "0")}:{String(minutes).padStart(2, "0")}{" "}
             {ampm}
